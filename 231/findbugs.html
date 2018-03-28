@@ -1,0 +1,1511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FindBugs Report</title>
+<style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+		    color: red;
+		    font-weight: bold;
+		}
+		.priority-2 {
+		    color: orange;
+		    font-weight: bold;
+		}
+		.priority-3 {
+		    color: green;
+		    font-weight: bold;
+		}
+		.priority-4 {
+		    color: blue;
+		    font-weight: bold;
+		}
+		</style>
+<script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+</head>
+<body>
+<h1>
+<a href="http://findbugs.sourceforge.net">FindBugs</a> Report</h1>
+<h2>Project Information</h2>
+<p>Project: 
+		</p>
+<p>FindBugs version: 3.0.1</p>
+<p>Code analyzed:</p>
+<ul>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/CrashReportWriter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/config/DownloadServiceCallbacksImpl.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/config/CastCallbackImpl$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/config/ApplicationCallbacksImpl.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/config/GpodnetCallbacksImpl.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/config/FlattrCallbacksImpl.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/config/PlaybackServiceCallbacksImpl.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/config/ClientConfigurator.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/config/CastCallbackImpl.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/config/DBTasksCallbacksImpl.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/view/AspectRatioVideoView.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/view/OnSwipeGesture.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/view/SwipeGestureDetector.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/view/SquareImageView.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$anim.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$interpolator.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$animator.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/service/PlayerWidgetService$ViewUpdater.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/service/PodcastTimeService.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/service/PlayerWidgetService.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/service/PlayerWidgetService$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/preferences/PreferenceController$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/preferences/PreferenceController.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/preferences/SwitchCompatPreference.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/preferences/PreferenceController$4.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/preferences/PreferenceController$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/preferences/PreferenceController$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/preferences/PreferenceController$PreferenceUI.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/preferences/PreferenceController$5.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/preferences/PreferenceControllerFlavorHelper.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/QueueFragment$5.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemFragment$4.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/FyydSearchFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/DownloadsFragment$DownloadsPagerAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/EpisodesFragment$EpisodesPagerAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/NewEpisodesFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ChaptersFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/AllEpisodesFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemlistFragment$5.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/RunningDownloadsFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/SearchFragment$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/AllEpisodesFragment$4.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaybackHistoryFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/DownloadsFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemlistFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/FilteredSubscriptionsFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/SubscriptionFragment$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/AddtoPlaylistFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemFragment$5.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/CustomMRControllerDialogFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/DownloadLogFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistsFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemFragment$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/AddFeedFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/DownloadLogFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistFragment$7.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/QueueFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemlistFragment$4.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/CoverFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/CompletedDownloadsFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/QueueFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistsFragment$2$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistsFragment$3$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistsFragment$2$1$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistsFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/AddtoPlaylistFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistFragment$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/FyydSearchFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/SubscriptionFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemlistFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistFragment$4$1$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/FyydSearchFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistFragment$4$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemlistFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/DownloadLogFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemlistFragment$7.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistsFragment$2$1$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaybackHistoryFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemDescriptionFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistsFragment$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemlistFragment$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemDescriptionFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/CompletedDownloadsFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/AllEpisodesFragment$5.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/CompletedDownloadsFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/FavoriteEpisodesFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistsFragment$3$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/AllEpisodesFragment$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaybackHistoryFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/QueueFragment$4.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItunesSearchFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/NewEpisodesFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/SearchFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistFragment$4$1$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistFragment$8.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ExternalPlayerFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/FavoriteEpisodesFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItunesSearchFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/QueueFragment$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/AllEpisodesFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/QueueFragment$6.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/SearchFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemlistFragment$6.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ExternalPlayerFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/SearchFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistFragment$6.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistFragment$5.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/AllEpisodesFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/QueueFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/SubscriptionFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/RunningDownloadsFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/SubscriptionFragment$4.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/gpodnet/PodcastListFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/gpodnet/PodcastListFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/gpodnet/GpodnetMainFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/gpodnet/TagListFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/gpodnet/TagListFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/gpodnet/SuggestionListFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/gpodnet/TagListFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/gpodnet/PodcastListFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/gpodnet/PodcastTopListFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/gpodnet/TagFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/gpodnet/SearchListFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/gpodnet/GpodnetMainFragment$GpodnetPagerAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/gpodnet/SearchListFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistFragment$4.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItemDescriptionFragment$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/SubscriptionFragment$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/EpisodesFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/ItunesSearchFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/fragment/PlaylistsFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$menu.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/menuhandler/FeedMenuHandler.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/menuhandler/FeedItemMenuHandler$MenuInterface.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/menuhandler/FeedMenuHandler$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/menuhandler/MenuItemUtils.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/menuhandler/FeedItemMenuHandler.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/menuhandler/NavDrawerActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/menuhandler/SubscriptionsSearchHandler$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/menuhandler/SubscriptionsSearchHandler.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$string.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$integer.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$layout.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$style.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$plurals.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/RatingDialog.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/RenameFeedDialog.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/EpisodesApplyActionFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/AutoFlattrPreferenceDialog$AutoFlattrPreferenceDialogInterface.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/CustomMRControllerDialog$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/CustomMRControllerDialog$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/ProxyDialog.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/SleepTimerDialog$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/GpodnetSetHostnameDialog.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/ProxyDialog$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/ProxyDialog$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/AuthenticationDialog.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/AutoFlattrPreferenceDialog.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/VariableSpeedDialog.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/AutoFlattrPreferenceDialog$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/SleepTimerDialog.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/ChooseDataFolderDialog.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/ProxyDialog$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/CustomMRControllerDialog$4.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/CustomMRControllerDialog.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/ChooseDataFolderDialog$RunnableWithString.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/dialog/CustomMRControllerDialog$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/spa/SPAUtil.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$anim.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$interpolator.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$animator.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$menu.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$string.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$integer.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$layout.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$style.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$plurals.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$bool.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$color.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$xml.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$attr.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$styleable.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$id.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$drawable.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$array.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$fraction.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/core/R$dimen.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$bool.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$color.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$xml.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$attr.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$styleable.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerInfoActivity$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/FeedInfoActivity$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/AboutActivity$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/StorageErrorActivity$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/DownloadAuthenticationActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/OpmlImportBaseActivity$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MainActivity$7.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/OnlineFeedViewActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/OpmlImportBaseActivity$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MainActivity$6.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/FeedInfoActivity$4.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/FlattrAuthActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerActivity$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/FeedInfoActivity$ApplyToEpisodesDialog.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/DirectoryChooserActivity$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MainActivity$8.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/AudioplayerActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/OnlineFeedViewActivity$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/FeedInfoActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/OnlineFeedViewActivity$FeedViewAuthenticationDialog.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerInfoActivity$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/VideoplayerActivity$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/OpmlImportFromIntentActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerActivity$SkipDirection.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/CastEnabledActivity$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/StorageErrorActivity$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/AboutActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/StatisticsActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/AboutActivity$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerInfoActivity$MediaplayerInfoPagerAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/DirectoryChooserActivity$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/OnlineFeedViewActivity$4.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/PreferenceActivity$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MainActivity$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MainActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/CastplayerActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerInfoActivity$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/DirectoryChooserActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/PreferenceActivityGingerbread$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MainActivity$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/CastEnabledActivity$CastButtonVisibilityManager.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerActivity$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/VideoplayerActivity$VideoControlsHider.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerActivity$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/FeedInfoActivity$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/PreferenceActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/StorageErrorActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/PreferenceActivity$MainFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerActivity$4.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/gpoddernet/GpodnetAuthenticationActivity$1$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/gpoddernet/GpodnetAuthenticationActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/gpoddernet/GpodnetAuthenticationActivity$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/gpoddernet/GpodnetAuthenticationActivity$3$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/gpoddernet/GpodnetAuthenticationActivity$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/gpoddernet/GpodnetAuthenticationActivity$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/OnlineFeedViewActivity$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/VideoplayerActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/OpmlImportBaseActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/CastEnabledActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerActivity$5.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MainActivity$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/SplashActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/PreferenceActivityGingerbread.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/FeedInfoActivity$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerInfoActivity$4.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/OpmlImportHolder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/OpmlFeedChooserActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/OnlineFeedViewActivity$3.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MainActivity$4.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerInfoActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MediaplayerInfoActivity$MediaplayerInfoContentFragment.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/OpmlImportFromPathActivity.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/activity/MainActivity$5.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$id.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/PodcastApp.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/StatisticsListAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/AddToPlaylistAdapter$AddToPlaylistViewHolder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DefaultActionButtonCallback.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistRecyclerAdapter$PlaylistViewHolder$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/SearchlistAdapter$ItemAccess.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/SearchlistAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/itunes/ItunesAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/itunes/ItunesAdapter$Podcast.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/itunes/ItunesAdapter$PodcastViewHolder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistRecyclerAdapter$OnItemLongClickListener.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/ChaptersListAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/AddToPlaylistAdapter$AddToPlaylistViewHolder$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/AllEpisodesRecycleAdapter$Holder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/QueueRecyclerAdapter$ViewHolder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/AdapterUtils.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/SubscriptionsAdapter$ItemAccess.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/ActionButtonCallback.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/QueueRecyclerAdapter$ItemAccess.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistsRecyclerAdapter$OnItemLongClickListener.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistRecyclerAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/FilteredSubscriptionsAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/FeedItemlistAdapter$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/NavListAdapter$ItemAccess.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/SearchlistAdapter$Holder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DownloadlistAdapter$ItemAccess.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/QueueRecyclerAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/AllEpisodesRecycleAdapter$ItemAccess.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/AllEpisodesRecycleAdapter$ItemTouchHelperViewHolder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistRecyclerAdapter$PlaylistViewHolder$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/FeedItemlistAdapter$ItemAccess.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/NavListAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/CoverTarget.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DownloadLogAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/FeedItemlistDescriptionAdapter$Holder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistRecyclerAdapter$PlaylistViewHolder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistRecyclerAdapter$OnItemClickListener.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DownloadlistAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DownloadLogAdapter$ButtonHolder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistRecyclerAdapter$ItemAccess.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DownloadedEpisodesListAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/QueueRecyclerAdapter$ItemTouchHelperViewHolder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DownloadedEpisodesListAdapter$Holder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/AddToPlaylistAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/ActionButtonUtils.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/QueueRecyclerAdapter$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/FeedItemlistAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistsRecyclerAdapter$PlaylistsViewHolder$2.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DownloadedEpisodesListAdapter$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DownloadLogAdapter$Holder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/AllEpisodesRecycleAdapter$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistsRecyclerAdapter$PlaylistsViewHolder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DownloadlistAdapter$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistsRecyclerAdapter$PlaylistsViewHolder$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/ChaptersListAdapter$Holder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistRecyclerAdapter$ItemTouchHelperViewHolderPlaylists.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/StatisticsListAdapter$StatisticsHolder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/NavListAdapter$FeedHolder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistsRecyclerAdapter$OnItemClickListener.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/AddToPlaylistAdapter$OnItemClickListener.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistRecyclerAdapter$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DownloadlistAdapter$Holder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/AllEpisodesRecycleAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/SubscriptionsAdapter$Holder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DownloadLogAdapter$ItemAccess.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/FeedItemlistDescriptionAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/FeedItemlistAdapter$Holder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/NavListAdapter$NavHolder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/gpodnet/TagListAdapter$Holder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/gpodnet/PodcastListAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/gpodnet/TagListAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/gpodnet/PodcastListAdapter$Holder.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/ChaptersListAdapter$Callback.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/SubscriptionsAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DownloadLogAdapter$1.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/DownloadedEpisodesListAdapter$ItemAccess.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/adapter/PlaylistsRecyclerAdapter.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$drawable.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$array.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$fraction.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/R$dimen.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/receiver/SPAReceiver.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/receiver/PlayerWidget.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/receiver/ConnectivityActionReceiver.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/receiver/PowerConnectionReceiver.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/asynctask/OpmlFeedQueuer.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/asynctask/OpmlImportWorker.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/asynctask/ExportWorker.class</li>
+<li>/home/travis/build/joeyfallu/AntennaPodSoen390/app/build/intermediates/classes/play/debug/de/danoeh/antennapod/BuildConfig.class</li>
+</ul>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Metrics</h2>
+<p>22542 lines of code analyzed,
+	in 364 classes, 
+	in 18 packages.</p>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Metric</th>
+<th align="right">Total</th>
+<th align="right">Density*</th>
+</tr>
+<tr class="tablerow0">
+<td>High Priority Warnings</td>
+<td align="right">6</td>
+<td align="right">0.27</td>
+</tr>
+<tr class="tablerow1">
+<td>Medium Priority Warnings</td>
+<td align="right">38</td>
+<td align="right">1.69</td>
+</tr>
+<tr class="$totalClass">
+<td>
+<b>Total Warnings</b>
+</td>
+<td align="right">
+<b>44</b>
+</td>
+<td align="right">
+<b>1.95</b>
+</td>
+</tr>
+</table>
+<p>
+<i>(* Defects per Thousand lines of non-commenting source statements)</i>
+</p>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Contents</h2>
+<ul>
+<li>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</li>
+<li>
+<a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+</li>
+<li>
+<a href="#Warnings_I18N">Internationalization Warnings</a>
+</li>
+<li>
+<a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+</li>
+<li>
+<a href="#Warnings_MT_CORRECTNESS">Multithreaded correctness Warnings</a>
+</li>
+<li>
+<a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+</li>
+<li>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</li>
+<li>
+<a href="#Details">Details</a>
+</li>
+</ul>
+<h1>Summary</h1>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Warning Type</th>
+<th align="right">Number</th>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</td>
+<td align="right">2</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+</td>
+<td align="right">5</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_I18N">Internationalization Warnings</a>
+</td>
+<td align="right">1</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+</td>
+<td align="right">2</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_MT_CORRECTNESS">Multithreaded correctness Warnings</a>
+</td>
+<td align="right">1</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+</td>
+<td align="right">13</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</td>
+<td align="right">20</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<b>Total</b>
+</td>
+<td align="right">
+<b>44</b>
+</td>
+</tr>
+</table>
+<h1>Warnings</h1>
+<p>Click on a warning row to see full context information.</p>
+<h2>
+<a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68963');">
+<td>
+<span class="priority-1">Nm</span>
+</td>
+<td>The class name de.danoeh.antennapod.menuhandler.MenuItemUtils shadows the simple name of the superclass de.danoeh.antennapod.core.menuhandler.MenuItemUtils</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68963" style="display: none;">
+<a href="#NM_SAME_SIMPLE_NAME_AS_SUPERCLASS">Bug type NM_SAME_SIMPLE_NAME_AS_SUPERCLASS (click for details)</a>
+<br/>In class de.danoeh.antennapod.menuhandler.MenuItemUtils<br/>In class de.danoeh.antennapod.core.menuhandler.MenuItemUtils<br/>At MenuItemUtils.java:[lines 18-44]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68286');">
+<td>
+<span class="priority-2">RV</span>
+</td>
+<td>Exceptional return value of java.io.File.delete() ignored in de.danoeh.antennapod.asynctask.ExportWorker.exportObservable()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68286" style="display: none;">
+<a href="#RV_RETURN_VALUE_IGNORED_BAD_PRACTICE">Bug type RV_RETURN_VALUE_IGNORED_BAD_PRACTICE (click for details)</a>
+<br/>In class de.danoeh.antennapod.asynctask.ExportWorker<br/>In method de.danoeh.antennapod.asynctask.ExportWorker.exportObservable()<br/>Called method java.io.File.delete()<br/>At ExportWorker.java:[line 42]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_CORRECTNESS">Correctness Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66744');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of MediaplayerActivity.controller in de.danoeh.antennapod.activity.MediaplayerActivity$3.onProgressChanged(SeekBar, int, boolean)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66744" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.MediaplayerActivity$3<br/>In method de.danoeh.antennapod.activity.MediaplayerActivity$3.onProgressChanged(SeekBar, int, boolean)<br/>Value contained in de.danoeh.antennapod.activity.MediaplayerActivity.controller<br/>Dereferenced at MediaplayerActivity.java:[line 488]<br/>Known null at MediaplayerActivity.java:[line 475]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67204');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>butSecondary could be null and is guaranteed to be dereferenced in de.danoeh.antennapod.adapter.ActionButtonUtils.configureActionButton(ImageButton, FeedItem, boolean)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67204" style="display: none;">
+<a href="#NP_GUARANTEED_DEREF">Bug type NP_GUARANTEED_DEREF (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.ActionButtonUtils<br/>In method de.danoeh.antennapod.adapter.ActionButtonUtils.configureActionButton(ImageButton, FeedItem, boolean)<br/>Value loaded from butSecondary<br/>Dereferenced at ActionButtonUtils.java:[line 89]<br/>Dereferenced at ActionButtonUtils.java:[line 72]<br/>Dereferenced at ActionButtonUtils.java:[line 91]<br/>Dereferenced at ActionButtonUtils.java:[line 67]<br/>Dereferenced at ActionButtonUtils.java:[line 79]<br/>Dereferenced at ActionButtonUtils.java:[line 60]<br/>Known null at ActionButtonUtils.java:[line 52]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67332');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of item in de.danoeh.antennapod.adapter.ActionButtonUtils.configureActionButton(ImageButton, FeedItem, boolean)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67332" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.ActionButtonUtils<br/>In method de.danoeh.antennapod.adapter.ActionButtonUtils.configureActionButton(ImageButton, FeedItem, boolean)<br/>Value loaded from item<br/>Dereferenced at ActionButtonUtils.java:[line 54]<br/>Known null at ActionButtonUtils.java:[line 52]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68890');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference of args in de.danoeh.antennapod.fragment.gpodnet.TagFragment.onCreate(Bundle)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68890" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+<br/>In class de.danoeh.antennapod.fragment.gpodnet.TagFragment<br/>In method de.danoeh.antennapod.fragment.gpodnet.TagFragment.onCreate(Bundle)<br/>Value loaded from args<br/>Dereferenced at TagFragment.java:[line 42]<br/>Known null at TagFragment.java:[line 41]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68757');">
+<td>
+<span class="priority-2">RCN</span>
+</td>
+<td>Nullcheck of feed at line 653 of value previously dereferenced in de.danoeh.antennapod.fragment.ItemlistFragment.loadData()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68757" style="display: none;">
+<a href="#RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">Bug type RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE (click for details)</a>
+<br/>In class de.danoeh.antennapod.fragment.ItemlistFragment<br/>In method de.danoeh.antennapod.fragment.ItemlistFragment.loadData()<br/>Value loaded from feed<br/>Return value of de.danoeh.antennapod.core.storage.DBReader.getFeed(long) of type de.danoeh.antennapod.core.feed.Feed<br/>At ItemlistFragment.java:[line 653]<br/>Redundant null check at ItemlistFragment.java:[line 654]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_I18N">Internationalization Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66274');">
+<td>
+<span class="priority-1">Dm</span>
+</td>
+<td>Found reliance on default encoding in de.danoeh.antennapod.CrashReportWriter.uncaughtException(Thread, Throwable): new java.io.FileWriter(File)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66274" style="display: none;">
+<a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
+<br/>In class de.danoeh.antennapod.CrashReportWriter<br/>In method de.danoeh.antennapod.CrashReportWriter.uncaughtException(Thread, Throwable)<br/>Called method new java.io.FileWriter(File)<br/>At CrashReportWriter.java:[line 34]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66518');">
+<td>
+<span class="priority-1">MS</span>
+</td>
+<td>de.danoeh.antennapod.activity.MainActivity.NAV_DRAWER_TAGS is a mutable array</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66518" style="display: none;">
+<a href="#MS_MUTABLE_ARRAY">Bug type MS_MUTABLE_ARRAY (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.MainActivity<br/>Field de.danoeh.antennapod.activity.MainActivity.NAV_DRAWER_TAGS<br/>At MainActivity.java:[line 98]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66828');">
+<td>
+<span class="priority-2">MS</span>
+</td>
+<td>de.danoeh.antennapod.activity.MediaplayerInfoActivity.NAV_DRAWER_TAGS should be package protected</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66828" style="display: none;">
+<a href="#MS_PKGPROTECT">Bug type MS_PKGPROTECT (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.MediaplayerInfoActivity<br/>Field de.danoeh.antennapod.activity.MediaplayerInfoActivity.NAV_DRAWER_TAGS<br/>At MediaplayerInfoActivity.java:[line 85]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_MT_CORRECTNESS">Multithreaded correctness Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68599');">
+<td>
+<span class="priority-2">LI</span>
+</td>
+<td>Incorrect lazy initialization and update of static field de.danoeh.antennapod.dialog.RatingDialog.mDialog in de.danoeh.antennapod.dialog.RatingDialog.check()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68599" style="display: none;">
+<a href="#LI_LAZY_INIT_UPDATE_STATIC">Bug type LI_LAZY_INIT_UPDATE_STATIC (click for details)</a>
+<br/>In class de.danoeh.antennapod.dialog.RatingDialog<br/>In method de.danoeh.antennapod.dialog.RatingDialog.check()<br/>On field de.danoeh.antennapod.dialog.RatingDialog.mDialog<br/>At RatingDialog.java:[lines 42-47]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_PERFORMANCE">Performance Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68522');">
+<td>
+<span class="priority-1">Bx</span>
+</td>
+<td>Boxing/unboxing to parse a primitive de.danoeh.antennapod.dialog.ProxyDialog$3.call(Subscriber)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68522" style="display: none;">
+<a href="#DM_BOXED_PRIMITIVE_FOR_PARSING">Bug type DM_BOXED_PRIMITIVE_FOR_PARSING (click for details)</a>
+<br/>In class de.danoeh.antennapod.dialog.ProxyDialog$3<br/>In method de.danoeh.antennapod.dialog.ProxyDialog$3.call(Subscriber)<br/>Called method Integer.intValue()<br/>Should call Integer.parseInt(String) instead<br/>At ProxyDialog.java:[line 256]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66483');">
+<td>
+<span class="priority-2">SIC</span>
+</td>
+<td>Should de.danoeh.antennapod.activity.FeedInfoActivity$ApplyToEpisodesDialog be a _static_ inner class?</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66483" style="display: none;">
+<a href="#SIC_INNER_SHOULD_BE_STATIC">Bug type SIC_INNER_SHOULD_BE_STATIC (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.FeedInfoActivity$ApplyToEpisodesDialog<br/>At FeedInfoActivity.java:[lines 393-405]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68251');">
+<td>
+<span class="priority-2">SIC</span>
+</td>
+<td>Should de.danoeh.antennapod.adapter.itunes.ItunesAdapter$PodcastViewHolder be a _static_ inner class?</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68251" style="display: none;">
+<a href="#SIC_INNER_SHOULD_BE_STATIC">Bug type SIC_INNER_SHOULD_BE_STATIC (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.itunes.ItunesAdapter$PodcastViewHolder<br/>At ItunesAdapter.java:[lines 184-188]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68722');">
+<td>
+<span class="priority-2">SIC</span>
+</td>
+<td>Should de.danoeh.antennapod.fragment.DownloadsFragment$DownloadsPagerAdapter be a _static_ inner class?</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68722" style="display: none;">
+<a href="#SIC_INNER_SHOULD_BE_STATIC">Bug type SIC_INNER_SHOULD_BE_STATIC (click for details)</a>
+<br/>In class de.danoeh.antennapod.fragment.DownloadsFragment$DownloadsPagerAdapter<br/>At DownloadsFragment.java:[lines 85-119]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66880');">
+<td>
+<span class="priority-2">SS</span>
+</td>
+<td>Unread field: de.danoeh.antennapod.activity.MediaplayerInfoActivity.TAG; should this field be static?</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66880" style="display: none;">
+<a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.MediaplayerInfoActivity<br/>Field de.danoeh.antennapod.activity.MediaplayerInfoActivity.TAG<br/>At MediaplayerInfoActivity.java:[line 81]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67478');">
+<td>
+<span class="priority-2">SS</span>
+</td>
+<td>Unread field: de.danoeh.antennapod.adapter.DownloadLogAdapter.TAG; should this field be static?</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67478" style="display: none;">
+<a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.DownloadLogAdapter<br/>Field de.danoeh.antennapod.adapter.DownloadLogAdapter.TAG<br/>At DownloadLogAdapter.java:[line 32]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67153');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread field: de.danoeh.antennapod.activity.gpoddernet.GpodnetAuthenticationActivity$2.exception</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67153" style="display: none;">
+<a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.gpoddernet.GpodnetAuthenticationActivity$2<br/>Field de.danoeh.antennapod.activity.gpoddernet.GpodnetAuthenticationActivity$2.exception<br/>At GpodnetAuthenticationActivity.java:[line 233]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67741');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread field: de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter.context</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67741" style="display: none;">
+<a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter<br/>Field de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter.context<br/>At PlaylistRecyclerAdapter.java:[line 70]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68839');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread field: de.danoeh.antennapod.fragment.gpodnet.GpodnetMainFragment$GpodnetPagerAdapter.resources</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68839" style="display: none;">
+<a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+<br/>In class de.danoeh.antennapod.fragment.gpodnet.GpodnetMainFragment$GpodnetPagerAdapter<br/>Field de.danoeh.antennapod.fragment.gpodnet.GpodnetMainFragment$GpodnetPagerAdapter.resources<br/>At GpodnetMainFragment.java:[line 78]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67792');">
+<td>
+<span class="priority-2">UuF</span>
+</td>
+<td>Unused field: de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter.selectedItem</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67792" style="display: none;">
+<a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter<br/>Field de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter.selectedItem<br/>In PlaylistRecyclerAdapter.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67839');">
+<td>
+<span class="priority-2">UuF</span>
+</td>
+<td>Unused field: de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter$PlaylistViewHolder.item</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67839" style="display: none;">
+<a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter$PlaylistViewHolder<br/>Field de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter$PlaylistViewHolder.item<br/>In PlaylistRecyclerAdapter.java</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68407');">
+<td>
+<span class="priority-2">UuF</span>
+</td>
+<td>Unused field: de.danoeh.antennapod.dialog.EpisodesApplyActionFragment.btnAddToPlaylist</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68407" style="display: none;">
+<a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+<br/>In class de.danoeh.antennapod.dialog.EpisodesApplyActionFragment<br/>Field de.danoeh.antennapod.dialog.EpisodesApplyActionFragment.btnAddToPlaylist<br/>In EpisodesApplyActionFragment.java</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67033');">
+<td>
+<span class="priority-2">WMI</span>
+</td>
+<td>de.danoeh.antennapod.activity.OnlineFeedViewActivity.showFeedInformation(Feed, Map) makes inefficient use of keySet iterator instead of entrySet iterator</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67033" style="display: none;">
+<a href="#WMI_WRONG_MAP_ITERATOR">Bug type WMI_WRONG_MAP_ITERATOR (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.OnlineFeedViewActivity<br/>In method de.danoeh.antennapod.activity.OnlineFeedViewActivity.showFeedInformation(Feed, Map)<br/>At OnlineFeedViewActivity.java:[line 452]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_STYLE">Dodgy code Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66623');">
+<td>
+<span class="priority-2">DLS</span>
+</td>
+<td>Dead store to media in de.danoeh.antennapod.activity.MediaplayerActivity.loadMediaInfo()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66623" style="display: none;">
+<a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.MediaplayerActivity<br/>In method de.danoeh.antennapod.activity.MediaplayerActivity.loadMediaInfo()<br/>Local variable named media<br/>At MediaplayerActivity.java:[line 676]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68668');">
+<td>
+<span class="priority-2">ICAST</span>
+</td>
+<td>Integral division result cast to double or float in de.danoeh.antennapod.dialog.SleepTimerDialog.getSleepTillEnd(PlaybackController)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68668" style="display: none;">
+<a href="#ICAST_IDIV_CAST_TO_DOUBLE">Bug type ICAST_IDIV_CAST_TO_DOUBLE (click for details)</a>
+<br/>In class de.danoeh.antennapod.dialog.SleepTimerDialog<br/>In method de.danoeh.antennapod.dialog.SleepTimerDialog.getSleepTillEnd(PlaybackController)<br/>At SleepTimerDialog.java:[line 147]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66410');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference in de.danoeh.antennapod.activity.DirectoryChooserActivity$1.onClick(View) due to return value of called method</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66410" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Bug type NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.DirectoryChooserActivity$1<br/>In method de.danoeh.antennapod.activity.DirectoryChooserActivity$1.onClick(View)<br/>Local variable stored in JVM register ?<br/>Dereferenced at DirectoryChooserActivity.java:[line 78]<br/>Known null at DirectoryChooserActivity.java:[line 78]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67405');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference in de.danoeh.antennapod.adapter.AllEpisodesRecycleAdapter$Holder.onCreateContextMenu(ContextMenu, View, ContextMenu$ContextMenuInfo) due to return value of called method</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67405" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Bug type NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.AllEpisodesRecycleAdapter$Holder<br/>In method de.danoeh.antennapod.adapter.AllEpisodesRecycleAdapter$Holder.onCreateContextMenu(ContextMenu, View, ContextMenu$ContextMenuInfo)<br/>Local variable stored in JVM register ?<br/>Dereferenced at AllEpisodesRecycleAdapter.java:[line 290]<br/>Known null at AllEpisodesRecycleAdapter.java:[line 290]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67886');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference in de.danoeh.antennapod.adapter.QueueRecyclerAdapter$ViewHolder.onCreateContextMenu(ContextMenu, View, ContextMenu$ContextMenuInfo) due to return value of called method</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67886" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Bug type NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.QueueRecyclerAdapter$ViewHolder<br/>In method de.danoeh.antennapod.adapter.QueueRecyclerAdapter$ViewHolder.onCreateContextMenu(ContextMenu, View, ContextMenu$ContextMenuInfo)<br/>Local variable stored in JVM register ?<br/>Dereferenced at QueueRecyclerAdapter.java:[line 180]<br/>Known null at QueueRecyclerAdapter.java:[line 180]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67959');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference in de.danoeh.antennapod.adapter.SubscriptionsAdapter.getView(int, View, ViewGroup) due to return value of called method</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67959" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Bug type NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.SubscriptionsAdapter<br/>In method de.danoeh.antennapod.adapter.SubscriptionsAdapter.getView(int, View, ViewGroup)<br/>Local variable stored in JVM register ?<br/>Dereferenced at SubscriptionsAdapter.java:[line 91]<br/>Known null at SubscriptionsAdapter.java:[line 91]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68032');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference in de.danoeh.antennapod.adapter.SubscriptionsAdapter.getView(int, View, ViewGroup) due to return value of called method</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68032" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Bug type NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.SubscriptionsAdapter<br/>In method de.danoeh.antennapod.adapter.SubscriptionsAdapter.getView(int, View, ViewGroup)<br/>Local variable stored in JVM register ?<br/>Dereferenced at SubscriptionsAdapter.java:[line 104]<br/>Known null at SubscriptionsAdapter.java:[line 104]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68105');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference in de.danoeh.antennapod.adapter.SubscriptionsAdapter.onItemClick(AdapterView, View, int, long) due to return value of called method</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68105" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Bug type NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.SubscriptionsAdapter<br/>In method de.danoeh.antennapod.adapter.SubscriptionsAdapter.onItemClick(AdapterView, View, int, long)<br/>Local variable stored in JVM register ?<br/>Dereferenced at SubscriptionsAdapter.java:[line 143]<br/>Known null at SubscriptionsAdapter.java:[line 143]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68178');">
+<td>
+<span class="priority-2">NP</span>
+</td>
+<td>Possible null pointer dereference in de.danoeh.antennapod.adapter.SubscriptionsAdapter.onItemClick(AdapterView, View, int, long) due to return value of called method</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68178" style="display: none;">
+<a href="#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Bug type NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.SubscriptionsAdapter<br/>In method de.danoeh.antennapod.adapter.SubscriptionsAdapter.onItemClick(AdapterView, View, int, long)<br/>Local variable stored in JVM register ?<br/>Dereferenced at SubscriptionsAdapter.java:[line 146]<br/>Known null at SubscriptionsAdapter.java:[line 146]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66570');">
+<td>
+<span class="priority-2">SF</span>
+</td>
+<td>Switch statement found in de.danoeh.antennapod.activity.MainActivity.onEventMainThread(ProgressEvent) where default case is missing</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66570" style="display: none;">
+<a href="#SF_SWITCH_NO_DEFAULT">Bug type SF_SWITCH_NO_DEFAULT (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.MainActivity<br/>In method de.danoeh.antennapod.activity.MainActivity.onEventMainThread(ProgressEvent)<br/>At MainActivity.java:[lines 733-743]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67086');">
+<td>
+<span class="priority-2">ST</span>
+</td>
+<td>Write to static field de.danoeh.antennapod.activity.PreferenceActivity.instance from instance method de.danoeh.antennapod.activity.PreferenceActivity.onCreate(Bundle)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67086" style="display: none;">
+<a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.PreferenceActivity<br/>In method de.danoeh.antennapod.activity.PreferenceActivity.onCreate(Bundle)<br/>Field de.danoeh.antennapod.activity.PreferenceActivity.instance<br/>At PreferenceActivity.java:[line 50]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67529');">
+<td>
+<span class="priority-1">ST</span>
+</td>
+<td>Write to static field de.danoeh.antennapod.adapter.NavListAdapter.titles from instance method new de.danoeh.antennapod.adapter.NavListAdapter(NavListAdapter$ItemAccess, Activity)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67529" style="display: none;">
+<a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.NavListAdapter<br/>In method new de.danoeh.antennapod.adapter.NavListAdapter(NavListAdapter$ItemAccess, Activity)<br/>Field de.danoeh.antennapod.adapter.NavListAdapter.titles<br/>At NavListAdapter.java:[line 74]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67596');">
+<td>
+<span class="priority-2">ST</span>
+</td>
+<td>Write to static field de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter.normalBackGroundColor from instance method new de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter(ArrayList, Context, MainActivity, PlaylistRecyclerAdapter$ItemAccess, ActionButtonCallback, ItemTouchHelper)</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67596" style="display: none;">
+<a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter<br/>In method new de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter(ArrayList, Context, MainActivity, PlaylistRecyclerAdapter$ItemAccess, ActionButtonCallback, ItemTouchHelper)<br/>Field de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter.normalBackGroundColor<br/>At PlaylistRecyclerAdapter.java:[line 77]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67663');">
+<td>
+<span class="priority-2">ST</span>
+</td>
+<td>Write to static field de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter.playingBackGroundColor from instance method new de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter(ArrayList, Context, MainActivity, PlaylistRecyclerAdapter$ItemAccess, ActionButtonCallback, ItemTouchHelper)</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67663" style="display: none;">
+<a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+<br/>In class de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter<br/>In method new de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter(ArrayList, Context, MainActivity, PlaylistRecyclerAdapter$ItemAccess, ActionButtonCallback, ItemTouchHelper)<br/>Field de.danoeh.antennapod.adapter.PlaylistRecyclerAdapter.playingBackGroundColor<br/>At PlaylistRecyclerAdapter.java:[line 73]<br/>Another occurrence at PlaylistRecyclerAdapter.java:[line 75]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66343');">
+<td>
+<span class="priority-2">ST</span>
+</td>
+<td>Write to static field de.danoeh.antennapod.PodcastApp.singleton from instance method de.danoeh.antennapod.PodcastApp.onCreate()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66343" style="display: none;">
+<a href="#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">Bug type ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD (click for details)</a>
+<br/>In class de.danoeh.antennapod.PodcastApp<br/>In method de.danoeh.antennapod.PodcastApp.onCreate()<br/>Field de.danoeh.antennapod.PodcastApp.singleton<br/>At PodcastApp.java:[line 54]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68454');">
+<td>
+<span class="priority-1">UC</span>
+</td>
+<td>Useless condition: it's known that port &lt;= 65535 (0xffff) at this point</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68454" style="display: none;">
+<a href="#UC_USELESS_CONDITION">Bug type UC_USELESS_CONDITION (click for details)</a>
+<br/>In class de.danoeh.antennapod.dialog.ProxyDialog<br/>In method de.danoeh.antennapod.dialog.ProxyDialog.checkPort()<br/>Value port &lt;= 65535 (0xffff)<br/>Unreachable code at ProxyDialog.java:[line 199]<br/>At ProxyDialog.java:[line 198]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66693');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: de.danoeh.antennapod.activity.MediaplayerActivity.orientation</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66693" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.MediaplayerActivity<br/>Field de.danoeh.antennapod.activity.MediaplayerActivity.orientation<br/>At MediaplayerActivity.java:[line 222]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68356');">
+<td>
+<span class="priority-2">UrF</span>
+</td>
+<td>Unread public/protected field: de.danoeh.antennapod.dialog.EpisodesApplyActionFragment.TAG</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68356" style="display: none;">
+<a href="#URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">Bug type URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class de.danoeh.antennapod.dialog.EpisodesApplyActionFragment<br/>Field de.danoeh.antennapod.dialog.EpisodesApplyActionFragment.TAG<br/>At EpisodesApplyActionFragment.java:[line 35]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66931');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten public or protected field: de.danoeh.antennapod.activity.MediaplayerInfoActivity.butCastDisconnect</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66931" style="display: none;">
+<a href="#UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD">Bug type UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.MediaplayerInfoActivity<br/>Field de.danoeh.antennapod.activity.MediaplayerInfoActivity.butCastDisconnect<br/>At AudioplayerActivity.java:[line 110]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66982');">
+<td>
+<span class="priority-2">UwF</span>
+</td>
+<td>Unwritten public or protected field: de.danoeh.antennapod.activity.MediaplayerInfoActivity.butPlaybackSpeed</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66982" style="display: none;">
+<a href="#UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD">Bug type UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD (click for details)</a>
+<br/>In class de.danoeh.antennapod.activity.MediaplayerInfoActivity<br/>Field de.danoeh.antennapod.activity.MediaplayerInfoActivity.butPlaybackSpeed<br/>At AudioplayerActivity.java:[line 68]</p>
+</td>
+</tr>
+</table>
+<h1>
+<a name="Details">Details</a>
+</h1>
+<h2>
+<a name="DM_BOXED_PRIMITIVE_FOR_PARSING">DM_BOXED_PRIMITIVE_FOR_PARSING: Boxing/unboxing to parse a primitive</a>
+</h2>
+
+  <p>A boxed primitive is created from a String, just to extract the unboxed primitive value.
+  It is more efficient to just call the static parseXXX method.</p>
+
+    
+<h2>
+<a name="DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE: Dead store to local variable</a>
+</h2>
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables.  Because FindBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    
+<h2>
+<a name="DM_DEFAULT_ENCODING">DM_DEFAULT_ENCODING: Reliance on default encoding</a>
+</h2>
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion, and will assume that the default platform encoding is suitable. This will cause the application behaviour to vary between platforms. Use an alternative API and specify a charset name or Charset object explicitly.  </p>
+
+      
+<h2>
+<a name="ICAST_IDIV_CAST_TO_DOUBLE">ICAST_IDIV_CAST_TO_DOUBLE: Integral division result cast to double or float</a>
+</h2>
+
+<p>
+This code casts the result of an integral division (e.g., int or long division)
+operation to double or
+float.
+Doing division on integers truncates the result
+to the integer value closest to zero.  The fact that the result
+was cast to double suggests that this precision should have been retained.
+What was probably meant was to cast one or both of the operands to
+double <em>before</em> performing the division.  Here is an example:
+</p>
+<blockquote>
+<pre>
+int x = 2;
+int y = 5;
+// Wrong: yields result 0.0
+double value1 =  x / y;
+
+// Right: yields result 0.4
+double value2 =  x / (double) y;
+</pre>
+</blockquote>
+
+    
+<h2>
+<a name="LI_LAZY_INIT_UPDATE_STATIC">LI_LAZY_INIT_UPDATE_STATIC: Incorrect lazy initialization and update of static field</a>
+</h2>
+
+<p> This method contains an unsynchronized lazy initialization of a static field.
+After the field is set, the object stored into that location is further updated or accessed.
+The setting of the field is visible to other threads as soon as it is set. If the
+futher accesses in the method that set the field serve to initialize the object, then
+you have a <em>very serious</em> multithreading bug, unless something else prevents
+any other thread from accessing the stored object until it is fully initialized.
+</p>
+<p>Even if you feel confident that the method is never called by multiple
+threads, it might be better to not set the static field until the value
+you are setting it to is fully populated/initialized.
+
+    
+<h2>
+<a name="MS_MUTABLE_ARRAY">MS_MUTABLE_ARRAY: Field is a mutable array</a>
+</h2>
+
+<p> A final static field references an array
+   and can be accessed by malicious code or
+        by accident from another package.
+   This code can freely modify the contents of the array.</p>
+
+    
+<h2>
+<a name="MS_PKGPROTECT">MS_PKGPROTECT: Field should be package protected</a>
+</h2>
+
+  <p> A mutable static field could be changed by malicious code or
+   by accident.
+   The field could be made package protected to avoid
+   this vulnerability.</p>
+
+    
+<h2>
+<a name="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS">NM_SAME_SIMPLE_NAME_AS_SUPERCLASS: Class names shouldn't shadow simple name of superclass</a>
+</h2>
+
+  <p> This class has a simple name that is identical to that of its superclass, except
+that its superclass is in a different package (e.g., <code>alpha.Foo</code> extends <code>beta.Foo</code>).
+This can be exceptionally confusing, create lots of situations in which you have to look at import statements
+to resolve references and creates many
+opportunities to accidentally define methods that do not override methods in their superclasses.
+</p>
+
+    
+<h2>
+<a name="NP_GUARANTEED_DEREF">NP_GUARANTEED_DEREF: Null value is guaranteed to be dereferenced</a>
+</h2>
+          
+              <p>
+              There is a statement or branch that if executed guarantees that
+              a value is null at this point, and that
+              value that is guaranteed to be dereferenced
+              (except on forward paths involving runtime exceptions).
+              </p>
+        <p>Note that a check such as
+            <code>if (x == null) throw new NullPointerException();</code>
+            is treated as a dereference of <code>x</code>.</p>
+          
+      
+<h2>
+<a name="NP_NULL_ON_SOME_PATH">NP_NULL_ON_SOME_PATH: Possible null pointer dereference</a>
+</h2>
+
+<p> There is a branch of statement that, <em>if executed,</em>  guarantees that
+a null value will be dereferenced, which
+would generate a <code>NullPointerException</code> when the code is executed.
+Of course, the problem might be that the branch or statement is infeasible and that
+the null pointer exception can't ever be executed; deciding that is beyond the ability of FindBugs.
+</p>
+
+    
+<h2>
+<a name="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE: Possible null pointer dereference due to return value of called method</a>
+</h2>
+      
+<p> The return value from a method is dereferenced without a null check,
+and the return value of that method is one that should generally be checked
+for null.  This may lead to a <code>NullPointerException</code> when the code is executed.
+</p>
+      
+   
+<h2>
+<a name="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE: Nullcheck of value previously dereferenced</a>
+</h2>
+
+<p> A value is checked here to see whether it is null, but this value can't
+be null because it was previously dereferenced and if it were null a null pointer
+exception would have occurred at the earlier dereference.
+Essentially, this code and the previous dereference
+disagree as to whether this value is allowed to be null. Either the check is redundant
+or the previous dereference is erroneous.</p>
+
+    
+<h2>
+<a name="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE">RV_RETURN_VALUE_IGNORED_BAD_PRACTICE: Method ignores exceptional return value</a>
+</h2>
+
+   <p> This method returns a value that is not checked. The return value should be checked
+since it can indicate an unusual or unexpected function execution. For
+example, the <code>File.delete()</code> method returns false
+if the file could not be successfully deleted (rather than
+throwing an Exception).
+If you don't check the result, you won't notice if the method invocation
+signals unexpected behavior by returning an atypical return value.
+</p>
+
+    
+<h2>
+<a name="SF_SWITCH_NO_DEFAULT">SF_SWITCH_NO_DEFAULT: Switch statement found where default case is missing</a>
+</h2>
+
+  <p> This method contains a switch statement where default case is missing.
+  Usually you need to provide a default case.</p>
+  <p>Because the analysis only looks at the generated bytecode, this warning can be incorrect triggered if
+the default case is at the end of the switch statement and the switch statement doesn't contain break statements for other
+cases.
+
+    
+<h2>
+<a name="SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC: Should be a static inner class</a>
+</h2>
+
+  <p> This class is an inner class, but does not use its embedded reference
+  to the object which created it.&nbsp; This reference makes the instances
+  of the class larger, and may keep the reference to the creator object
+  alive longer than necessary.&nbsp; If possible, the class should be
+   made static.
+</p>
+
+    
+<h2>
+<a name="SS_SHOULD_BE_STATIC">SS_SHOULD_BE_STATIC: Unread field: should this field be static?</a>
+</h2>
+
+  <p> This class contains an instance final field that
+   is initialized to a compile-time static value.
+   Consider making the field static.</p>
+
+    
+<h2>
+<a name="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD: Write to static field from instance method</a>
+</h2>
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    
+<h2>
+<a name="UC_USELESS_CONDITION">UC_USELESS_CONDITION: Condition has no effect</a>
+</h2>
+
+<p>This condition always produces the same result as the value of the involved variable was narrowed before. 
+Probably something else was meant or condition can be removed.</p>
+
+    
+<h2>
+<a name="URF_UNREAD_FIELD">URF_UNREAD_FIELD: Unread field</a>
+</h2>
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    
+<h2>
+<a name="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD">URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD: Unread public/protected field</a>
+</h2>
+
+  <p> This field is never read.&nbsp;
+The field is public or protected, so perhaps
+    it is intended to be used with classes not seen as part of the analysis. If not,
+consider removing it from the class.</p>
+
+    
+<h2>
+<a name="UUF_UNUSED_FIELD">UUF_UNUSED_FIELD: Unused field</a>
+</h2>
+
+  <p> This field is never used.&nbsp; Consider removing it from the class.</p>
+
+    
+<h2>
+<a name="UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD">UWF_UNWRITTEN_PUBLIC_OR_PROTECTED_FIELD: Unwritten public or protected field</a>
+</h2>
+
+  <p> No writes were seen to this public/protected field.&nbsp; All reads of it will return the default
+value. Check for errors (should it have been initialized?), or remove it if it is useless.</p>
+
+    
+<h2>
+<a name="WMI_WRONG_MAP_ITERATOR">WMI_WRONG_MAP_ITERATOR: Inefficient use of keySet iterator instead of entrySet iterator</a>
+</h2>
+
+<p> This method accesses the value of a Map entry, using a key that was retrieved from
+a keySet iterator. It is more efficient to use an iterator on the entrySet of the map, to avoid the
+Map.get(key) lookup.</p>
+
+        </body>
+</html>
