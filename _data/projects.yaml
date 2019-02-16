@@ -1,9 +1,14 @@
-- title: Automatic Language Detection
-  url: https://automatic-language-detection.herokuapp.com/
-  image: https://cdn-images-1.medium.com/max/1600/0*577-u5IUpNyUtdtO.jpg
-  completed: true
-
 - title: QualityDoc
   url: http://qualitydoc.us-east-1.elasticbeanstalk.com/
   image: https://www.maxpixel.net/static/photo/1x/Wooden-Desk-Background-Wood-Desktop-Table-Aerial-3271749.jpg
   completed: false
+
+- title: Language Detection
+  url: https://automatic-language-detection.herokuapp.com/
+  image: https://cdn-images-1.medium.com/max/1600/0*577-u5IUpNyUtdtO.jpg
+  completed: true
+
+- title: Dota2 Picker
+  url: https://dota-counter-picker.herokuapp.com/
+  image: https://i.pinimg.com/originals/00/93/9d/00939dff0059e823658afe98bb6d87a4.jpg
+  completed: true
