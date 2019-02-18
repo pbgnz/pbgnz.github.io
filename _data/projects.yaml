@@ -1,7 +1,7 @@
 - title: QualityDoc
   url: http://qualitydoc.us-east-1.elasticbeanstalk.com/
   image: https://www.maxpixel.net/static/photo/1x/Wooden-Desk-Background-Wood-Desktop-Table-Aerial-3271749.jpg
-  completed: false
+  completed: true
 
 - title: Language Detection
   url: https://automatic-language-detection.herokuapp.com/
