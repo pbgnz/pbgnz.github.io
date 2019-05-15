@@ -7,12 +7,14 @@ $(function() {
 });
 
 // Projects Menu
-$('.projects-menu-icon').click(function() {
-  $('html').toggleClass('no-scroll');
-  $(this).toggleClass('active');
-  $('.overlay').toggleClass('show');
-});
-  
+// $('.projects-menu-icon').click(function() {
+//   $('html').toggleClass('no-scroll');
+//   $(this).toggleClass('active');
+//   $('.overlay').toggleClass('show');
+// });
+// Hide Project menu icon.
+$('.projects-menu-icon').hide();
+
 // All others
 $(document).ready(function() {
 	$('.image-popup').magnificPopup({
