@@ -159,3 +159,8 @@ Blog's default JSON Format
 ### License
 
 ![GitHub](https://img.shields.io/github/license/imfunniee/gitfolio.svg?style=popout-square)
+
+
+### Command
+
+> gitfolio build pbgnz --background https://images.unsplash.com/photo-1557277770-baf0ca74f908?w=1634
