@@ -163,4 +163,4 @@ Blog's default JSON Format
 
 ### Command
 
-> gitfolio build pbgnz --background https://images.unsplash.com/photo-1557277770-baf0ca74f908?w=1634
+> gitfolio build pbgnz --sort star --background https://images.unsplash.com/photo-1557277770-baf0ca74f908?w=1634
