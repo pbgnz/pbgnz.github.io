@@ -7,15 +7,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112417666-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-112417666-1');
-    </script>
     <link rel="stylesheet" href="index.css">
   <link rel="icon" href="https://avatars.githubusercontent.com/u/20388583?v=4" type="image/png"></head>
 
@@ -25,12 +16,12 @@
     </div>
     <div id="profile">
       <div id="profile_img" style="background: url(https://avatars.githubusercontent.com/u/20388583?v=4) center;"></div>
-      <div id="username"><span style="display:block;">Pablo González</span><a href="https://github.com/pbgnz">@pbgnz</a></div>
-      <div id="userbio" style="display: block;">Tinkerer</div>
+      <div id="username"><span style="display:none;">null</span><a href="https://github.com/pbgnz">@pbgnz</a></div>
+      <div id="userbio" style="display: none;">undefined</div>
       <div id="about">
                 <span style="display:none;"><i class="fas fa-users"></i> &nbsp; null</span>
                 <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
-                <span style="display:block;"><i class="fas fa-link"></i> &nbsp; <a href="https://github.com/pbgnz">https://github.com/pbgnz</a></span>
+                <span style="display:none;"><i class="fas fa-link"></i> &nbsp; <a href=""></a></span>
                 <span style="display:none;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; null</span>
                 <span style="display:none;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span>
                 <div class="socials">
@@ -45,6 +36,32 @@
       <div id="work">
         <h1>Work.</h1>
         <div class="projects" id="work_section">
+                        <a href="https://github.com/pbgnz/dota-counter-picker" target="_blank">
+                        <section>
+                            <div class="section_title">dota-counter-picker</div>
+                            <div class="about_section">
+                            <span style="display:block;">dota2 recommender app</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Vue</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 5</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/pbgnz/pbgnz.github.io" target="_blank">
+                        <section>
+                            <div class="section_title">pbgnz.github.io</div>
+                            <div class="about_section">
+                            <span style="display:block;">personal web page</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; HTML</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 3</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
                         <a href="https://github.com/escobot/breathe" target="_blank">
                         <section>
                             <div class="section_title">breathe</div>
@@ -53,6 +70,32 @@
                             </div>
                             <div class="bottom_section">
                                 <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/escobot/cuisine-crown-design" target="_blank">
+                        <section>
+                            <div class="section_title">cuisine-crown-design</div>
+                            <div class="about_section">
+                            <span style="display:none;">undefined</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; CSS</span>
+                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
+                            </div>
+                        </section>
+                        </a>
+                        <a href="https://github.com/escobot/delish" target="_blank">
+                        <section>
+                            <div class="section_title">delish</div>
+                            <div class="about_section">
+                            <span style="display:block;">tasty food tweets</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; JavaScript</span>
                                 <span><i class="fas fa-star"></i>&nbsp; 0</span>
                                 <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
                             </div>
@@ -123,11 +166,11 @@
                             </div>
                         </section>
                         </a>
-                        <a href="https://github.com/pbgnz/automatic-language-identification" target="_blank">
+                        <a href="https://github.com/escobot/video-trimmer" target="_blank">
                         <section>
-                            <div class="section_title">automatic-language-identification</div>
+                            <div class="section_title">video-trimmer</div>
                             <div class="about_section">
-                            <span style="display:block;">a probabilistic language identification system that identifies the language of a sentence </span>
+                            <span style="display:block;">video trimmer script</span>
                             </div>
                             <div class="bottom_section">
                                 <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
@@ -136,14 +179,14 @@
                             </div>
                         </section>
                         </a>
-                        <a href="https://github.com/escobot/delish" target="_blank">
+                        <a href="https://github.com/pbgnz/automatic-language-identification" target="_blank">
                         <section>
-                            <div class="section_title">delish</div>
+                            <div class="section_title">automatic-language-identification</div>
                             <div class="about_section">
-                            <span style="display:block;">tasty food tweets</span>
+                            <span style="display:block;">a probabilistic language identification system that identifies the language of a sentence </span>
                             </div>
                             <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; JavaScript</span>
+                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
                                 <span><i class="fas fa-star"></i>&nbsp; 0</span>
                                 <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
                             </div>
@@ -188,19 +231,6 @@
                             </div>
                         </section>
                         </a>
-                        <a href="https://github.com/pbgnz/my-history-dosis" target="_blank">
-                        <section>
-                            <div class="section_title">my-history-dosis</div>
-                            <div class="about_section">
-                            <span style="display:block;">exploring the past through historical photographs</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; JavaScript</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
                         <a href="https://github.com/pbgnz/puzzle" target="_blank">
                         <section>
                             <div class="section_title">puzzle</div>
@@ -239,32 +269,6 @@
                                 <span><i class="fas fa-code-branch"></i>&nbsp; 1</span>
                             </div>
                         </section>
-                        </a>
-                        <a href="https://github.com/pbgnz/pbgnz.github.io" target="_blank">
-                        <section>
-                            <div class="section_title">pbgnz.github.io</div>
-                            <div class="about_section">
-                            <span style="display:block;">personal web page</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; HTML</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 3</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/pbgnz/dota-counter-picker" target="_blank">
-                        <section>
-                            <div class="section_title">dota-counter-picker</div>
-                            <div class="about_section">
-                            <span style="display:block;">dota2 recommender app</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Vue</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 4</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
                         </a></div>
       </div>
       <div id="forks" style="display:none;">
@@ -276,6 +280,7 @@
         <div id="blogs"></div>
       </div>
       <div id="footer">
+        <a href="https://github.com/imfunniee" target="_blank">made on earth by a human</a>
       </div>
     </div>
     <script type="text/javascript">
